@@ -24,7 +24,12 @@ public class CodesCracker
             if(word.equals(words[j]))
             {
                count++;
-              
+               for(k=j; k<(wordsLen-1); k++)
+               {
+                  words[k] = words[k+1];
+               }
+               wordsLen--;
+               j--;
             }
          }
          System.out.println(word+ " occurs " +count);
